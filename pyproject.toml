@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pynmeaparser"
+version = "1.0.0"
+authors = [
+  { name="Ahmad Shahril", email="shah25392+pypi@gmail.com" },
+]
+description = "A package to parse general form of NMEA sentences. It is not specific to just certain devices only."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Utilities",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/shah253kt/pynmeaparser"
+"Bug Tracker" = "https://github.com/shah253kt/pynmeaparser/issues"

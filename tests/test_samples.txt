@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------
+Import libraries
+----------------------------------------------------------------------------------
+>>> from pynmeaparser import NMEAParser
+
+----------------------------------------------------------------------------------
+Define handlers
+----------------------------------------------------------------------------------
+>>> def handler(fields): print(fields)
+>>> parser = NMEAParser()
+>>> parser.add_handler('GPGGA', handler)
+>>> parser.add_handler('AIVDM', handler)
+>>> parser.add_handler('GPVTG', handler)
+>>> parser.add_handler('GPZDA', handler)
+>>> parser.add_handler('GPGLL', handler)
+>>> parser.add_handler('GPRMC', handler)
+
+----------------------------------------------------------------------------------
+Perform tests
+----------------------------------------------------------------------------------
+>>> parser.process('$GPZDA,024008.97,24,11,2022,00,00*62')
+['GPZDA', '024008.97', '24', '11', '2022', '00', '00']
+
+>>> parser.process('$GPVTG,126.1,T,,')
+>>> parser.process('M,10.00,N,18.52,K*6B')
+['GPVTG', '126.1', 'T', '', 'M', '10.00', 'N', '18.52', 'K']
